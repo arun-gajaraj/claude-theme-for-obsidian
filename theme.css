@@ -11,22 +11,22 @@
 
 .theme-dark {
   /* --- Backgrounds --- */
-  --background-primary:         #1a1a1a;
-  --background-primary-alt:     #1f1f1f;
-  --background-secondary:       #111111;
-  --background-secondary-alt:   #161616;
-  --background-modifier-border:        #2a2a2a;
-  --background-modifier-border-hover:  #3a3a3a;
+  --background-primary:         #30302e;
+  --background-primary-alt:     #363634;
+  --background-secondary:       #262624;
+  --background-secondary-alt:   #2c2c2a;
+  --background-modifier-border:        #3e3e3c;
+  --background-modifier-border-hover:  #4e4e4c;
   --background-modifier-border-focus:  #d4714e;
   --background-modifier-error:         #5c2a20;
   --background-modifier-error-rgb:     92, 42, 32;
   --background-modifier-error-hover:   #6e3327;
   --background-modifier-success:       #1e3a2f;
-  --background-modifier-message:       #1a1a1a;
+  --background-modifier-message:       #30302e;
   --background-modifier-hover:         rgba(212, 113, 78, 0.09);
   --background-modifier-active-hover:  rgba(212, 113, 78, 0.15);
-  --background-modifier-form-field:            #1e1e1e;
-  --background-modifier-form-field-highlighted: #252525;
+  --background-modifier-form-field:            #282826;
+  --background-modifier-form-field-highlighted: #2e2e2c;
 
   /* --- Text --- */
   --text-normal:          #ececec;
@@ -65,7 +65,7 @@
   --h6-color: #c06040;
 
   /* --- Code --- */
-  --code-background:  #161616;
+  --code-background:  #21211f;
   --code-normal:      #e2e2e2;
   --code-comment:     #6b7280;
   --code-function:    #93c5fd;
@@ -99,10 +99,10 @@
   /* --- Tables --- */
   --table-border-color:             #2a2a2a;
   --table-border-width:             1px;
-  --table-header-background:        #151515;
-  --table-header-background-hover:  #1c1c1c;
+  --table-header-background:        #242422;
+  --table-header-background-hover:  #2a2a28;
   --table-background:               transparent;
-  --table-alt-background:           #141414;
+  --table-alt-background:           #282826;
 
   /* --- Tags --- */
   --tag-color:            #d4714e;
@@ -257,7 +257,7 @@ svg * {
 
 /* --- Bold & Italic --- */
 .markdown-rendered strong {
-  font-weight: 700;
+  font-weight: 750;
   color: var(--bold-color);
 }
 
@@ -275,7 +275,7 @@ svg * {
   font-size: 0.865em;
   font-weight: 400;
   background-color: #252525;
-  color: #e8a870;
+  color: #fe8181;
   padding: 0.18em 0.45em;
   border-radius: 4px;
   border: 1px solid rgba(212, 113, 78, 0.22);
@@ -451,7 +451,7 @@ svg * {
 
 .markdown-rendered hr {
   border: none;
-  border-top: 1px solid var(--background-modifier-border);
+  border-top: 1px solid rgba(236, 236, 236, 0.6);
   margin: 2.2em 0;
 }
 
@@ -512,8 +512,21 @@ svg * {
    WORKSPACE — sidebar, nav, status bar
    ============================================================ */
 
-.workspace-leaf-content {
+/* Main editor/viewer area only */
+.mod-root .workspace-leaf-content {
   background-color: var(--background-primary);
+}
+
+/* Left sidebar — file explorer, search, tags, etc. */
+.workspace-left-split,
+.workspace-left-split .workspace-tabs,
+.workspace-left-split .workspace-leaf,
+.workspace-left-split .workspace-leaf-content,
+.workspace-left-split .workspace-tab-header-container-inner,
+.nav-files-container,
+.workspace-left-split .tree-item-self,
+.workspace-left-split .nav-header {
+  background-color: var(--background-secondary) !important;
 }
 
 .nav-folder-title,
@@ -538,7 +551,7 @@ svg * {
 
 /* Status bar */
 .status-bar {
-  background-color: #090909;
+  background-color: #161614;
   border-top: 1px solid var(--background-modifier-border);
   color: var(--text-faint);
   font-family: var(--font-interface-theme);
@@ -548,12 +561,12 @@ svg * {
 /* Title bar */
 .titlebar,
 .titlebar-inner {
-  background-color: #090909;
+  background-color: #161614;
 }
 
 /* Workspace ribbon */
 .workspace-ribbon {
-  background-color: #090909;
+  background-color: #161614;
   border-right: 1px solid var(--background-modifier-border);
 }
 
@@ -810,7 +823,7 @@ input[type="search"]:focus,
 
 .cm-strong {
   color: var(--bold-color);
-  font-weight: 700;
+  font-weight: 750;
 }
 
 .cm-em {
@@ -838,7 +851,7 @@ input[type="search"]:focus,
   font-family: var(--font-monospace-theme) !important;
   font-size: 0.865em;
   background-color: #252525 !important;
-  color: #e8a870 !important;
+  color: #fe8181 !important;
   padding: 0.15em 0.4em;
   border-radius: 4px;
   border: 1px solid rgba(212, 113, 78, 0.22);
@@ -929,7 +942,7 @@ input[type="search"]:focus,
 
 .HyperMD-hr {
   color: transparent !important;
-  border-top: 1px solid var(--background-modifier-border);
+  border-top: 1px solid rgba(236, 236, 236, 0.6);
   margin: 0.5em 0;
 }
 
