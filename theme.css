@@ -122,7 +122,7 @@
   --callout-bug:     224, 112, 112;
 
   /* --- Canvas --- */
-  --canvas-color:       26, 26, 26;
+  --canvas-color:       rgb(26, 26, 26);
   --canvas-dot-pattern: #2a2a2a;
 
   /* --- Shadows --- */
